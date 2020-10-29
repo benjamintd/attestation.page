@@ -6,7 +6,7 @@ import Meta from "../components/Meta";
 import Reason from "../components/Reason";
 import { generatePdf } from "../lib/pdf-util";
 import useLocalStorage from "../lib/use-local-storage";
-import { addSlash, downloadBlob, validateState } from "../lib/util";
+import { addSlash, openBlob, validateState } from "../lib/util";
 
 export default function Home() {
   const [state, setState] = useLocalStorage("attestation-derogatoire", {
@@ -34,7 +34,7 @@ export default function Home() {
   }, []);
 
   const [stateValid, setStateValid] = useState(false);
-  console.log(stateValid);
+
   useEffect(() => {
     if (validateState(state)) {
       setStateValid(true);
@@ -55,10 +55,9 @@ export default function Home() {
   };
 
   const onClick = async (event) => {
-    console.log(event);
     const reason = event.target.id;
     const pdfBlob = await generatePdf(state, reason, "/certificate.pdf");
-    downloadBlob(pdfBlob, `attestation-${new Date().toLocaleString()}.pdf`);
+    openBlob(pdfBlob);
   };
 
   return (
