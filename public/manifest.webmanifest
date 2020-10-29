@@ -1,0 +1,21 @@
+{
+  "name": "Attestation rapide.",
+  "short_name": "Attestation rapide.",
+  "description": "L'attestation la plus rapide. Ne retapez pas vos infos à chaque fois.",
+  "icons": [
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone"
+}

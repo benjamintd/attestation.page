@@ -1,0 +1,40 @@
+@tailwind base;
+
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write your own custom component styles here */
+.btn-blue {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+}
+
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+body {
+  @apply bg-gray-100
+}
+
+input {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-6;
+}
+
+label {
+  @apply block text-gray-700 text-sm font-bold mb-2
+}
+
+button {
+  @apply font-bold py-4 px-6 rounded bg-blue-500 text-white w-full mb-4;
+}
+
+button:hover {
+  @apply bg-blue-700;
+}
+
+button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
