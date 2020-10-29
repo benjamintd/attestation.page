@@ -43,16 +43,15 @@ export default function Home() {
 
   const onChange = (event) => {
     const input = event.target;
-
-    let value = input.value;
-    if (input.id === "birthday") {
-      const key = event.keyCode || event.charCode;
-      if (key !== 8 && key !== 46) {
-        value = addSlash(value);
-      }
-    }
-
     setState({ ...state, [input.id]: input.value });
+  };
+
+  const onDateKeyUp = (event) => {
+    const input = event.target;
+    const key = event.keyCode || event.charCode;
+    if (key !== 8 && key !== 46) {
+      setState({ ...state, [input.id]: addSlash(input.value) });
+    }
   };
 
   const onClick = async (event) => {
@@ -91,7 +90,7 @@ export default function Home() {
           <Reason stateValid={stateValid} onClick={onClick} />
         )}
 
-        <Form state={state} onChange={onChange} />
+        <Form state={state} onChange={onChange} onDateKeyUp={onDateKeyUp} />
 
         {!initialStateValid && (
           <Reason stateValid={stateValid} onClick={onClick} />

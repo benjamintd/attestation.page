@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Form({ state, onChange }) {
+export default function Form({ state, onChange, onDateKeyUp }) {
   const {
     lastname,
     firstname,
@@ -46,7 +46,6 @@ export default function Form({ state, onChange }) {
       />
 
       <label htmlFor="birthday">Date de naissance (au format jj/mm/aaaa)</label>
-
       <input
         required
         aria-invalid="false"
@@ -61,6 +60,7 @@ export default function Form({ state, onChange }) {
         type="text"
         value={birthday}
         onChange={onChange}
+        onKeyUp={onDateKeyUp}
       />
 
       <label htmlFor="lieunaissance">Lieu de naissance</label>
