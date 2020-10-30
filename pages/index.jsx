@@ -96,9 +96,15 @@ export default function Home() {
         )}
 
         <div className="w-full text-center prose">
-          Code source disponible sur{" "}
-          <a href="https://github.com/benjamintd/attestation.page">GitHub</a>,
-          inspiré des projets de <a href="https://github.com/LAB-MI">Lab MI</a>.
+          <p>
+            Code source disponible sur{" "}
+            <a href="https://github.com/benjamintd/attestation.page">GitHub</a>,
+            inspiré des projets de{" "}
+            <a href="https://github.com/LAB-MI">Lab MI</a>.
+          </p>
+          {process.env.VERCEL_GITHUB_COMMIT_SHA && (
+            <p>version {process.env.VERCEL_GITHUB_COMMIT_SHA.slice(0, 8)}</p>
+          )}
         </div>
       </div>
     </>
