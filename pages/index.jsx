@@ -66,6 +66,7 @@ export default function Home() {
       <div className="p-4 md:p-6 lg:p-12 max-w-2xl mx-auto">
         <div className="h-8 w-8 mb-6">
           <Image
+            alt="logo"
             className="h-full w-full"
             height={180}
             src="/apple-touch-icon.png"
