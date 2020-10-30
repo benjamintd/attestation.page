@@ -57,13 +57,13 @@ export default function Home() {
   const onClick = async (event) => {
     const reason = event.target.id;
     const pdfBlob = await generatePdf(state, reason, "/certificate.pdf");
-    openBlob(pdfBlob);
+    openBlob(pdfBlob, `attestation-${Date.now()}.pdf`);
   };
 
   return (
     <>
       <Meta />
-      <div className="p-12 max-w-2xl mx-auto">
+      <div className="p-6 lg:p-12 max-w-2xl mx-auto">
         <div className="h-8 w-8 mb-6">
           <Image
             className="h-full w-full"
