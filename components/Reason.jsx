@@ -9,6 +9,9 @@ export default function Reason({ onClick, stateValid }) {
       <button disabled={!stateValid} id="travail" onClick={onClick}>
         Je vais travailler
       </button>
+      <button disabled={!stateValid} id="achats" onClick={onClick}>
+        Je vais faire des achats de première nécessité
+      </button>
       <button disabled={!stateValid} id="enfants" onClick={onClick}>
         Je vais chercher les enfants à l'école
       </button>
