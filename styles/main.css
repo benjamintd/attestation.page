@@ -28,13 +28,17 @@ label {
 }
 
 button {
-  @apply font-bold py-4 px-6 rounded bg-blue-500 text-white w-full mb-4;
+  @apply font-bold py-4 px-6 rounded bg-accent-700 text-white w-full mb-4 text-left;
 }
 
 button:hover {
-  @apply bg-blue-700;
+  @apply bg-accent-500;
 }
 
 button:disabled {
   @apply opacity-50 cursor-not-allowed;
+}
+
+.icon {
+  @apply w-6 h-6 inline-block mr-4;
 }

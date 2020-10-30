@@ -24,7 +24,7 @@ export default function Form({ state, onChange, onDateKeyUp }) {
         className="form-control"
         id="firstname"
         name="firstname"
-        placeholder="Jean"
+        placeholder="Dominique"
         type="text"
         value={firstname}
         onChange={onChange}
