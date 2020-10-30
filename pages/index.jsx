@@ -9,7 +9,7 @@ import useLocalStorage from "../lib/use-local-storage";
 import { addSlash, openBlob, validateState } from "../lib/util";
 
 export default function Home() {
-  const [state, setState] = useLocalStorage("attestation-derogatoire", {
+  const emptyState = {
     lastname: "",
     firstname: "",
     birthday: "",
@@ -17,7 +17,12 @@ export default function Home() {
     address: "",
     zipcode: "",
     town: "",
-  });
+  };
+
+  const [state, setState] = useLocalStorage(
+    "attestation-derogatoire",
+    emptyState
+  );
 
   const [initialStateValid, setInitialStateValid] = useState(false);
   useEffect(() => {
@@ -60,6 +65,11 @@ export default function Home() {
     openBlob(pdfBlob, `attestation-${Date.now()}.pdf`);
   };
 
+  const emptyForm = (event) => {
+    event.preventDefault();
+    setState(emptyState);
+  };
+
   return (
     <>
       <Meta />
@@ -96,7 +106,11 @@ export default function Home() {
           <Reason stateValid={stateValid} onClick={onClick} />
         )}
 
-        <div className="w-full text-center prose">
+        <div className="w-full prose">
+          <a className="cursor-pointer hover:text-gray-700" onClick={emptyForm}>
+            Oublier mes informations
+          </a>
+
           <p>
             Code source disponible sur{" "}
             <a href="https://github.com/benjamintd/attestation.page">GitHub</a>,
