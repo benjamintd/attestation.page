@@ -1,10 +1,6 @@
 const withOffline = require("next-offline");
 
 module.exports = withOffline({
-  i18n: {
-    locales: ["fr-FR"],
-    defaultLocale: "fr-FR",
-  },
   workboxOpts: {
     swDest: process.env.NEXT_EXPORT
       ? "service-worker.js"
