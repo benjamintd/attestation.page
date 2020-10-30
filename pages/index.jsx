@@ -92,7 +92,7 @@ export default function Home() {
           </p>
           <p>
             Ce service n'est pas officiel mais délivre des attestations
-            conformes.
+            conformes, en un clic.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export default function Home() {
         )}
 
         <div className="w-full prose">
-          <a className="cursor-pointer hover:text-gray-700" onClick={emptyForm}>
+          <a href="#" onClick={emptyForm}>
             Oublier mes informations
           </a>
 
