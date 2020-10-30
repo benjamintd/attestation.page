@@ -3,7 +3,7 @@ import React from "react";
 
 const Meta = () => {
   const description =
-    "L'attestation la plus rapide. Ne retapez pas vos infos à chaque fois.";
+    "Générez des attestation en une seconde, sans avoir à retaper vos infos à chaque fois.";
   const title = "Attestation en un clic";
   const ogImage = "https://attestation.page/og-image.png";
   return (
