@@ -102,6 +102,13 @@ export default function Home() {
             inspiré des projets de{" "}
             <a href="https://github.com/LAB-MI">Lab MI</a>.
           </p>
+          <p>
+            Pour être certain d'avoir une attestation à jour, rendez-vous sur{" "}
+            <a href="https://media.interieur.gouv.fr/deplacement-covid-19/">
+              le site officiel
+            </a>{" "}
+            du Gouvernement.
+          </p>
           {process.env.VERCEL_GITHUB_COMMIT_SHA && (
             <p>version {process.env.VERCEL_GITHUB_COMMIT_SHA.slice(0, 8)}</p>
           )}
