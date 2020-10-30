@@ -94,6 +94,12 @@ export default function Home() {
         {!initialStateValid && (
           <Reason stateValid={stateValid} onClick={onClick} />
         )}
+
+        <div className="w-full text-center prose">
+          Code source disponible sur{" "}
+          <a href="https://github.com/benjamintd/attestation.page">GitHub</a>,
+          inspiré des projets de <a href="https://github.com/LAB-MI">Lab MI</a>.
+        </div>
       </div>
     </>
   );
