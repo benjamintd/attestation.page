@@ -20,7 +20,7 @@ const Meta = () => {
       <meta content={ogImage} name="twitter:image" />
       <meta content="summary_large_image" name="twitter:card"></meta>
       <meta content="#f7fafc" name="theme-color"></meta>
-      <link href="/icon-512.png" rel="apple-touch-icon"></link>
+      <link href="/apple-touch-icon.png" rel="apple-touch-icon"></link>
       <link href="/manifest.webmanifest" rel="manifest"></link>
       <meta
         content="covid19, covid-19, attestation, déclaration, déplacement, officielle, gouvernement"

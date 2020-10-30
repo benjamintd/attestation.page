@@ -62,11 +62,11 @@ export default function Home() {
   const onClick = async (event) => {
     const reason = event.target.id;
     const pdfBlob = await generatePdf(state, reason, "/certificate.pdf");
+    console.log(pdfBlob);
     openBlob(pdfBlob, `attestation-${Date.now()}.pdf`);
   };
 
-  const emptyForm = (event) => {
-    event.preventDefault();
+  const emptyForm = () => {
     setState(emptyState);
   };
 
