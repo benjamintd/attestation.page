@@ -36,6 +36,17 @@ export default function Home() {
       minute: "2-digit",
     });
     setState({ ...state, heuresortie, datesortie });
+
+    const interval = window.setInterval(() => {
+      const datesortie = new Date().toLocaleDateString("fr-FR");
+      const heuresortie = new Date().toLocaleTimeString("fr-FR", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      setState({ ...state, heuresortie, datesortie });
+    }, 5000);
+
+    return () => window.clearInterval(interval);
   }, []);
 
   const [stateValid, setStateValid] = useState(false);
@@ -62,7 +73,6 @@ export default function Home() {
   const onClick = async (event) => {
     const reason = event.target.id;
     const pdfBlob = await generatePdf(state, reason, "/certificate.pdf");
-    console.log(pdfBlob);
     openBlob(pdfBlob, `attestation-${Date.now()}.pdf`);
   };
 
