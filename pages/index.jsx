@@ -36,7 +36,9 @@ export default function Home() {
       minute: "2-digit",
     });
     setState({ ...state, heuresortie, datesortie });
+  }, []);
 
+  useEffect(() => {
     const interval = window.setInterval(() => {
       const datesortie = new Date().toLocaleDateString("fr-FR");
       const heuresortie = new Date().toLocaleTimeString("fr-FR", {
@@ -47,7 +49,7 @@ export default function Home() {
     }, 5000);
 
     return () => window.clearInterval(interval);
-  }, []);
+  }, [state]);
 
   const [stateValid, setStateValid] = useState(false);
 
