@@ -137,7 +137,7 @@ export default function Form({ state, onChange, onDateKeyUp }) {
         value={datesortie}
       />
 
-      <label htmlFor="heuresortie">Date de sortie</label>
+      <label htmlFor="heuresortie">Heure de sortie</label>
       <input
         disabled
         required
