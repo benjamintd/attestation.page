@@ -4,21 +4,20 @@ import React, { useEffect, useState } from "react";
 import Form from "../components/Form";
 import Meta from "../components/Meta";
 import Reason from "../components/Reason";
-import { generatePdf } from "../lib/pdf-util";
 import useLocalStorage from "../lib/use-local-storage";
-import { addSlash, openBlob, validateState } from "../lib/util";
+import { addSlash, openPdf, validateState } from "../lib/util";
+
+export const emptyState = {
+  lastname: "",
+  firstname: "",
+  birthday: "",
+  lieunaissance: "",
+  address: "",
+  zipcode: "",
+  town: "",
+};
 
 export default function Home() {
-  const emptyState = {
-    lastname: "",
-    firstname: "",
-    birthday: "",
-    lieunaissance: "",
-    address: "",
-    zipcode: "",
-    town: "",
-  };
-
   const [state, setState] = useLocalStorage(
     "attestation-derogatoire",
     emptyState
@@ -74,8 +73,7 @@ export default function Home() {
 
   const onClick = async (event) => {
     const reason = event.target.id;
-    const pdfBlob = await generatePdf(state, reason, "/certificate.pdf");
-    openBlob(pdfBlob, `attestation-${Date.now()}.pdf`);
+    openPdf(state, reason);
   };
 
   const emptyForm = () => {
