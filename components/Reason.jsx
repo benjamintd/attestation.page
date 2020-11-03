@@ -21,7 +21,7 @@ export default function Reason({ onClick, stateValid }) {
       </button>
       <button disabled={!stateValid} id="travail" onClick={onClick}>
         <Work className="icon" />
-        Je vais travailler
+        Je me rends au travail ou en reviens
       </button>
       <button disabled={!stateValid} id="achats" onClick={onClick}>
         <Shop className="icon" />
