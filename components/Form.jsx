@@ -17,7 +17,6 @@ export default function Form({ state, onChange, onDateKeyUp }) {
     <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full">
       <label htmlFor="firstname">Prénom</label>
       <input
-        autoFocus
         required
         aria-invalid="false"
         autoComplete="given-name"
@@ -32,7 +31,6 @@ export default function Form({ state, onChange, onDateKeyUp }) {
 
       <label htmlFor="lastname">Nom</label>
       <input
-        autoFocus
         required
         aria-invalid="false"
         autoComplete="family-name"
