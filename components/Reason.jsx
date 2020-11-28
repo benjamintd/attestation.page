@@ -17,7 +17,7 @@ export default function Reason({ onClick, stateValid }) {
     <div className="w-full mb-8">
       <button disabled={!stateValid} id="sport_animaux" onClick={onClick}>
         <Sport className="icon" />
-        Je promène dans un rayon de 20 km
+        Je me promène dans un rayon de 20 km
       </button>
       <button disabled={!stateValid} id="travail" onClick={onClick}>
         <Work className="icon" />
