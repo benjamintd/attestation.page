@@ -75,12 +75,12 @@ export default function Home() {
   const onClick = async (event) => {
     const reason = event.target.id;
     const pdfBlob = await generatePdf(state, reason, "/certificate.pdf");
-    
+
     const creationInstant = new Date();
-    const creationDate = creationInstant.toLocaleDateString('fr-CA');
+    const creationDate = creationInstant.toLocaleDateString("fr-CA");
     const creationHour = creationInstant
-      .toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
-      .replace(':', '-');
+      .toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })
+      .replace(":", "-");
 
     openBlob(pdfBlob, `attestation-${creationDate}_${creationHour}.pdf`);
   };
