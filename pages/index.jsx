@@ -92,17 +92,17 @@ export default function Home() {
   return (
     <>
       <Meta />
-      <div className="p-4 md:p-6 lg:p-12 max-w-2xl mx-auto">
-        <div className="h-8 w-8 mb-6">
+      <div className="max-w-2xl p-4 mx-auto md:p-6 lg:p-12">
+        <div className="w-8 h-8 mb-6">
           <Image
             alt="logo"
-            className="h-full w-full"
+            className="w-full h-full"
             height={180}
             src="/apple-touch-icon.png"
             width={180}
           />
         </div>
-        <div className="prose mb-12">
+        <div className="mb-12 prose">
           <h1>Attestation de déplacement dérogatoire</h1>
           <p>
             Remplissez le formulaire une fois, il sera sauvegardé sur votre
@@ -137,7 +137,7 @@ export default function Home() {
             <a href="https://github.com/LAB-MI">Lab MI</a>.
           </p>
           <p>
-            Pour être certain d'avoir une attestation à jour, rendez-vous sur{" "}
+            Pour être certain·e d'avoir une attestation à jour, rendez-vous sur{" "}
             <a href="https://media.interieur.gouv.fr/deplacement-covid-19/">
               le site officiel
             </a>{" "}
@@ -146,6 +146,10 @@ export default function Home() {
           {process.env.VERCEL_GITHUB_COMMIT_SHA && (
             <p>version {process.env.VERCEL_GITHUB_COMMIT_SHA.slice(0, 8)}</p>
           )}
+
+          <a href="https://www.buymeacoffee.com/benjamintd">
+            <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=benjamintd&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" />
+          </a>
         </div>
       </div>
     </>
